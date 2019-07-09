@@ -28,7 +28,8 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-        numOfClicks: 0
+        numOfClicks: 0,
+        series: []
     };
     this.handleIncrement = this.handleIncrement.bind(this);
     this.handleDecrement = this.handleDecrement.bind(this);
@@ -47,7 +48,9 @@ class App extends React.Component{
   }
 
   componentDidMount(){
-
+    fetch('http://api.tvmaze.com/search/shows?q=Vikings')
+      .then(response => response.json())
+      .then(json => this.setState({ series: json }))
   }
 
   render(){
@@ -73,7 +76,6 @@ class App extends React.Component{
           Learn React
         </a>
       </header>
-
     </div>
   );
   }

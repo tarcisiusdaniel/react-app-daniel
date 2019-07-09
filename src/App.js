@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'whatwg-fetch';
 
 // function App() {
 //   return (
@@ -43,6 +44,10 @@ class App extends React.Component{
       this.setState({
         numOfClicks: this.state.numOfClicks - 1
       });
+  }
+
+  componentDidMount(){
+
   }
 
   render(){

@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import Series from './containers/Series';
 import './App.css';
 import 'whatwg-fetch';
 
@@ -48,9 +49,14 @@ class App extends React.Component{
   }
 
   componentDidMount(){
-    fetch('http://api.tvmaze.com/search/shows?q=Vikings')
-      .then(response => response.json())
-      .then(json => this.setState({ series: json }))
+    const series = ["Vikings", "Game of Thrones"];
+
+    setTimeout(() => {
+      this.setState({ series: series });
+    }, 2000);
+    // fetch('http://api.tvmaze.com/search/shows?q=Vikings')
+    //   .then(response => response.json())
+    //   .then(json => this.setState({ series: json }))
   }
 
   render(){
@@ -76,6 +82,10 @@ class App extends React.Component{
           Learn React
         </a>
       </header>
+      <p>
+        Number of series: {this.state.series.length}
+      </p>
+      <Series />
     </div>
   );
   }

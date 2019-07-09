@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+// import * as serviceWorker from './serviceWorker';
 
 //const example
 const currDate = () => {
@@ -34,13 +34,13 @@ class CarType extends Car{
 }
 const myCar = new CarType('Toyota', 'Innova');
 
-const starter = <h1>
-    Hello Tarcisius
-    <br/>
-    Current Date: {currDate()}
-    <br/>
-    {myCar.tell()}
-    </h1>;
+// const starter = <h1>
+//     Hello Tarcisius
+//     <br/>
+//     Current Date: {currDate()}
+//     <br/>
+//     {myCar.tell()}
+//     </h1>;
 
 ReactDOM.render(<App name = "Tarcisius Daniel Hartanto"/>, document.getElementById('root'));
 

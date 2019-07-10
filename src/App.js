@@ -49,14 +49,14 @@ class App extends React.Component{
   }
 
   componentDidMount(){
-    const series = ["Vikings", "Game of Thrones"];
+    // const series = ["Vikings", "Game of Thrones"];
 
-    setTimeout(() => {
-      this.setState({ series: series });
-    }, 2000);
-    // fetch('http://api.tvmaze.com/search/shows?q=Vikings')
-    //   .then(response => response.json())
-    //   .then(json => this.setState({ series: json }))
+    // setTimeout(() => {
+    //   this.setState({ series: series });
+    // }, 2000);
+    fetch('http://api.tvmaze.com/search/shows?q=Vikings')
+      .then(response => response.json())
+      .then(json => this.setState({ series: json }))
   }
 
   render(){

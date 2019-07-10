@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import SeriesList from '../../components/SeriesList';
 import Loader from '../../components/Loader';
+import Intro from '../../components/Intro';
 import 'whatwg-fetch';
 // "Vikings", "Lord of The Rings", "Game of Thrones"
+
 class Series extends Component {
     constructor(props){
         super(props);
@@ -37,6 +39,7 @@ class Series extends Component {
 
         return (
             <div>
+                <Intro message = "Here you can find most of all your loved TV series" />
                 {/* The length of series array - {this.state.series.length} */}
                 <div>
                     <input
@@ -55,7 +58,7 @@ class Series extends Component {
                 }
                 {
                     isFetching && 
-                    <Loader />
+                    <Loader loadingMessage = "Loading...."/>
                 }
                 {
                     !isFetching && seriesName.trim() !== '' && series.length !== 0 &&

@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import Series from './containers/Series';
+import Main from './components/Main';
 import './App.css';
 import 'whatwg-fetch';
 
@@ -85,7 +85,7 @@ class App extends React.Component{
       <p>
         Number of series: {this.state.series.length}
       </p>
-      <Series />
+      <Main />
     </div>
   );
   }

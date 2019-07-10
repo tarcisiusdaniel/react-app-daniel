@@ -3,8 +3,10 @@ import loaderPic from '../../images/giphy.gif';
 
 const Loader = props => (
     <div>
-        <p>Loading....</p>
+        <p>{props.loadingMessage}</p>
         <img 
+            //feel free to add style to the pic
+            //style = ({})
             alt = 'Loader Icon'
             src = {loaderPic} />
     </div>

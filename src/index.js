@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 // import * as serviceWorker from './serviceWorker';
 
 //const example
@@ -42,7 +43,10 @@ const myCar = new CarType('Toyota', 'Innova');
 //     {myCar.tell()}
 //     </h1>;
 
-ReactDOM.render(<App name = "Tarcisius Daniel Hartanto"/>, document.getElementById('root'));
+ReactDOM.render(
+    <BrowserRouter><App name = "Tarcisius Daniel Hartanto"/></BrowserRouter>, 
+    document.getElementById('root')
+    );
 
 //ReactDOM.render(starter, document.getElementById('root'));
 

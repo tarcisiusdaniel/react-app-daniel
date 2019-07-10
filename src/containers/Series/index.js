@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SeriesList from '../../components/SeriesList';
+import Loader from '../../components/Loader';
 import 'whatwg-fetch';
 // "Vikings", "Lord of The Rings", "Game of Thrones"
 class Series extends Component {
@@ -45,14 +46,25 @@ class Series extends Component {
                     />
                 </div>
                 {
-                    series.length === 0 && seriesName.trim() === '' &&
+                    !isFetching && series.length === 0 && seriesName.trim() === '' &&
                     <p>Search the TV series that you want by typing the name in the bar provided</p>
                 }
                 {
-                    series.length === 0 && seriesName.trim() !== '' &&
+                    !isFetching && series.length === 0 && seriesName.trim() !== '' &&
                     <p>Sorry, but the TV series that you search cannot be found</p>
                 }
-                <SeriesList list = {this.state.series} />
+                {
+                    isFetching && 
+                    <Loader />
+                }
+                {
+                    !isFetching && seriesName.trim() !== '' && series.length !== 0 &&
+                    <div>
+                        <p>Here is what we found by far</p>
+                        <SeriesList list = {this.state.series} />
+                    </div>
+                }
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
         )
     }

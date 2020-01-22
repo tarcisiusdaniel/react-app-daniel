@@ -69,7 +69,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### Description of the program
 
-This react App is a trial program that [consumes data from a TV-series and movies API from the front-end level].
+This react App is a trial program that <b>consumes data from a TV-series and movies API from the front-end level</b>.
 </br>
 The data from the API can be accesses from the search bar. The user will be able to see some details of a movie or TV-series
 </br>

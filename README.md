@@ -66,3 +66,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+Description
+This react App is a trial program that [consumes data from a TV-series and movies API from the front-end level.]
+</br>
+The data from the API can be accesses from the search bar. The user will be able to see some details of a movie or TV-series
+</br>
+Every time the user types in any characters in the search bar, the program will fetch movies or TV-series data from the API which names match the character typed in the search bar.
+</br>
+The user can view the details of a movie or TV-series by clicking the name of the desired movie or TV-series listed below the search bar
